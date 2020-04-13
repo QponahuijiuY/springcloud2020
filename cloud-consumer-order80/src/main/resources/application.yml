@@ -1,2 +1,18 @@
 server:
   port: 80
+
+spring:
+  application:
+    name: cloud-order-server
+
+
+eureka:
+  instance:
+    instance-id: order80
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+    fetch-registry: true
+    register-with-eureka: true
